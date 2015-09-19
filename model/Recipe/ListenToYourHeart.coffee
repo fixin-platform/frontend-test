@@ -27,13 +27,7 @@ class Recipes.ListenToYourHeart extends Recipes.Bitly
         steps = @stepsByKey()
         input =
           ListenToYourHeart:
-            GoogleWriteSpreadsheets:
-              avatarId: steps["GoogleChooseAvatar"].avatarId
-              params: {}
-            BitlyDownloadLinks:
-              avatarId: steps["BitlyChooseAvatar"].avatarId
-              params: {}
-            GoogleWriteSpreadsheetCells:
+            Echo:
               avatarId: steps["GoogleChooseAvatar"].avatarId
               params: {}
       else
