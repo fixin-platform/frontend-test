@@ -23,13 +23,12 @@ class Recipes.ListenToYourHeart extends Recipes.Bitly
 
   input: (step) ->
     switch step.key
-      when "ListenToYourHeart"
+      when "Echo"
         steps = @stepsByKey()
         input =
-          ListenToYourHeart:
-            Echo:
-              avatarId: steps["GoogleChooseAvatar"].avatarId
-              params: {}
+          Echo:
+            avatarId: steps["GoogleChooseAvatar"].avatarId
+            messages: []
       else
         throw new Meteor.Error "Recipe:unknown-step-cls", "Can't generate input for unknown step cls '#{step.cls}'",
           recipe: @
@@ -38,7 +37,7 @@ class Recipes.ListenToYourHeart extends Recipes.Bitly
 
   progressBars: (step) ->
     switch step.key
-      when "ListenToYourHeart"
+      when "Echo"
         progressBars = @generateProgressBars [
           "Echo"
         ], [
