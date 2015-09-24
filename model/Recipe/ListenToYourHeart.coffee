@@ -13,20 +13,20 @@ class Recipes.ListenToYourHeart extends Recipes.Bitly
         position: position++
     )
     @generateStep(
-      key: "Echo"
+      key: "ListenToYourHeart"
     ,
       $setOnInsert:
-        cls: "Echo"
+        cls: "ListenToYourHeart"
       $set:
         position: position++
     )
 
   input: (step) ->
     switch step.key
-      when "Echo"
+      when "ListenToYourHeart"
         steps = @stepsByKey()
         input =
-          Echo:
+          ListenToYourHeart:
             avatarId: steps["GoogleChooseAvatar"].avatarId
             messages: []
       else
@@ -37,11 +37,11 @@ class Recipes.ListenToYourHeart extends Recipes.Bitly
 
   progressBars: (step) ->
     switch step.key
-      when "Echo"
+      when "ListenToYourHeart"
         progressBars = @generateProgressBars [
-          "Echo"
+          "ListenToYourHeart"
         ], [
-          "Echo"
+          "ListenToYourHeart"
         ]
       else
         throw new Meteor.Error "Recipe:unknown-step-cls", "Can't generate progress bars for unknown step cls '#{step.cls}'",

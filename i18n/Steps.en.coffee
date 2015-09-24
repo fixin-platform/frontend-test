@@ -1,10 +1,10 @@
 i18n.addResourceBundle("en", "translation",
   Steps:
-    Echo:
+    ListenToYourHeart:
       icon: "music"
       default: "Enable echo"
       progressBars:
-        Echo:
+        ListenToYourHeart:
           waiting: "Will hear oneself"
           connecting: "Warming inner fire"
           loading_simple: "Listening to echoes, {{current}} so far"
