@@ -1,25 +1,13 @@
 class Recipes.ListenToYourHeart extends Recipes.Bitly
   generateSteps: ->
-    position = 1
-
-    @generateStep(
+    @insertStep
       key: "GoogleChooseAvatar"
-    ,
-      $setOnInsert:
-        cls: "GoogleChooseAvatar"
-        api: "Google"
-        scopes: ["https://www.googleapis.com/auth/drive", "https://spreadsheets.google.com/feeds"]
-      $set:
-        position: position++
-    )
-    @generateStep(
+      cls: "GoogleChooseAvatar"
+      api: "Google"
+      scopes: ["https://www.googleapis.com/auth/drive", "https://spreadsheets.google.com/feeds"]
+    @insertStep
       key: "ListenToYourHeart"
-    ,
-      $setOnInsert:
-        cls: "ListenToYourHeart"
-      $set:
-        position: position++
-    )
+      cls: "ListenToYourHeart"
 
   input: (step) ->
     switch step.key
