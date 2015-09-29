@@ -1,11 +1,6 @@
 class Recipes.ListenToYourHeart extends Recipes.Bitly
   generateSteps: ->
     @insertStep
-      key: "GoogleChooseAvatar"
-      cls: "GoogleChooseAvatar"
-      api: "Google"
-      scopes: ["https://www.googleapis.com/auth/drive", "https://spreadsheets.google.com/feeds"]
-    @insertStep
       key: "ListenToYourHeart"
       cls: "ListenToYourHeart"
 
@@ -15,7 +10,6 @@ class Recipes.ListenToYourHeart extends Recipes.Bitly
         steps = @stepsByKey()
         input =
           ListenToYourHeart:
-            avatarId: steps["GoogleChooseAvatar"].avatarId
             messages: []
       else
         throw new Meteor.Error "Recipe:unknown-step-cls", "Can't generate input for unknown step cls '#{step.cls}'",

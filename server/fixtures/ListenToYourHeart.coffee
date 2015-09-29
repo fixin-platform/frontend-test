@@ -9,39 +9,23 @@ Fixtures.push Recipes,
     userId: "CharlieDalton"
 
 Fixtures.push Steps,
-  "pHPRN6kNkPRcMYq2P":
-    key: "GoogleChooseAvatar"
-    recipeId: "xe3TQ6jGHg3rPJzDC"
-    userId: "CharlieDalton"
-    cls: "GoogleChooseAvatar"
-    api: "Google"
-    scopes: [
-      "https://www.googleapis.com/auth/drive"
-      "https://spreadsheets.google.com/feeds"
-    ]
-    isCompleted: true
-    avatarId: "ph97QcNowToYymcTZ"
   "ZkGwBLePh2LvJzmDe":
     key: "ListenToYourHeart"
     recipeId: "xe3TQ6jGHg3rPJzDC"
     userId: "CharlieDalton"
     cls: "ListenToYourHeart"
     isCompleted: false
-  "3Ke2EJF48FuNotf6M":
-    key: "GoogleChooseAvatar"
-    recipeId: "nZafiarGfwrZNTvfE"
-    userId: "CharlieDalton"
-    cls: "GoogleChooseAvatar"
-    api: "Google"
-    scopes: [
-      "https://www.googleapis.com/auth/drive"
-      "https://spreadsheets.google.com/feeds"
-    ]
-    isCompleted: true
-    avatarId: "ph97QcNowToYymcTZ"
   "JqSe2h7WGG6AtjGvZ":
     key: "ListenToYourHeart"
     recipeId: "nZafiarGfwrZNTvfE"
     userId: "CharlieDalton"
     cls: "ListenToYourHeart"
     isCompleted: false
+
+Fixtures.push Avatars,
+  "ph97QcNowToYymcTZ":
+    api: "Google"
+    uid: "109043415184924494271"
+    userId: "CharlieDalton"
+    name: "Google Mannequin (mannequin.api@gmail.com)"
+    imageUrl: "https://lh6.googleusercontent.com/-wPx85HdCmk8/AAAAAAAAAAI/AAAAAAAAABY/42cCbG5xj78/photo.jpg"
